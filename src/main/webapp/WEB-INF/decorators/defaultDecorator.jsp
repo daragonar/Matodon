@@ -22,7 +22,16 @@ $(document).ready(function() {
             "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
         }
     } );
+
+$(".nav li a").on('click', function() {
+	console.log("Hola");
+	$(this).parent().addClass("active");
+})
+
 } );
+
+
+
 </script> 
 
  </head>
@@ -33,13 +42,16 @@ $(document).ready(function() {
 		<a class="navbar-brand" href="#">Title</a>
 		<ul class="nav navbar-nav">
 			<li class="active">
-				<a href="/mastodon/">Home</a>
+				<a href='<c:url value="/" />'>Home</a>
 			</li>
 			<li>
-				<a href="pizza">pizza</a>
+				<a href="<c:url value="/pizza" />">pizza</a>
 			</li>
 			<li>
-				<a href="ingredientes">Ingredientes</a>
+				<a href="<c:url value="/ingredientes" />">Ingredientes</a>
+			</li>
+			<li>
+				<a href="<c:url value="/login" />">Login</a>
 			</li>
 		</ul>
 	</div>
